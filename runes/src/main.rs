@@ -21,8 +21,8 @@ struct RhunesTranslator {
 
 impl RhunesTranslator {
     fn new() -> Self {
-        let latin_chars = "abcdefghijklmnopqrstuvwxyz";
-        let rhunes_chars = "ᚨᛒᚲᛞᛖᚠᚷᚺᛁᛃᚲᛚᛗᚾᛟᛈᚲᚱᛊᛏᚢᚢᚹᛊᛁᛉ";
+        let latin_chars = "abcdefghijklmnopqrstuvwyz";
+        let rhunes_chars = "ᚨᛒᚲᛞᛖᚠᚷᚺᛁᛃᚲᛚᛗᚾᛟᛈᚲᚱᛊᛏᚢᚢᚹᛁᛉ";
         
         let latin_to_rhunes: HashMap<char, char> = latin_chars
             .chars()
