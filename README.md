@@ -20,7 +20,7 @@ This will output:
 
 3. Reverse the translation
 ```bash
-./target/release/rhunes-translator **-r** "ᚾᛖᚱ ᚺᚱᚲᛖᛈᛈᛖᚾ ᚢᚨᚱ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛏᚱᛖ, ᚢᚨᚱ ᛗᛖᚾᚾᛖᚾ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛊᛏᚨᚨᚢᛚ."
+./target/release/rhunes-translator -r "ᚾᛖᚱ ᚺᚱᚲᛖᛈᛈᛖᚾ ᚢᚨᚱ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛏᚱᛖ, ᚢᚨᚱ ᛗᛖᚾᚾᛖᚾ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛊᛏᚨᚨᚢᛚ."
 
 ```
 
