@@ -1,4 +1,4 @@
-# runes
+# rhunes
 translate text into runes on the cli
 
 Here's a Rust implementation of your Rhunes translator:
