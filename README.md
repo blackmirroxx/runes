@@ -28,7 +28,7 @@ This will output:
 ```
 ner skeppen var gjorda av tre, var mennen gjorda av staavl.
 ```
-The reverse is for from perfect but good enough XD
+The reverse is far from perfect but good enough XD
 
 **Features:**
 - Handles all your special rules for ä, ö, ü, å, ø, æ, th, sk, sj
