@@ -26,7 +26,7 @@ This will output:
 
 This will output:
 ```
-ner skeppen var gjorda av tre, var mennen gjorda av ytaavl.
+ner skeppen var gjorda av tre, var mennen gjorda av staavl.
 ```
 The reverse is for from perfect but good enough XD
 
