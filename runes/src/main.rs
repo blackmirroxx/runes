@@ -44,6 +44,7 @@ impl RhunesTranslator {
             ("th", "ᚦ"),
             ("sk", "ᚺᚱᚲ"),
             ("sj", "ᚺᚱᚲ"),
+            ("x", "ᚲᛊ"),
         ].iter().cloned().collect();
         
         let reverse_special_rules: HashMap<&str, &str> = [
@@ -55,6 +56,7 @@ impl RhunesTranslator {
             ("ᛇᛇ", "aeae"),
             ("ᚦ", "th"),
             ("ᚺᚱᚲ", "sk"),
+            ("ᚲᛊ", "x"),
         ].iter().cloned().collect();
 
         Self {
