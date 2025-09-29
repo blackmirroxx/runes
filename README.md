@@ -18,6 +18,12 @@ This will output:
 ᚾᛖᚱ ᚺᚱᚲᛖᛈᛈᛖᚾ ᚢᚨᚱ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛏᚱᛖ, ᚢᚨᚱ ᛗᛖᚾᚾᛖᚾ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛊᛏᚨᚨᚢᛚ.
 ```
 
+3. Reverse the translation
+```bash
+./target/release/rhunes-translator **-r** "ᚾᛖᚱ ᚺᚱᚲᛖᛈᛈᛖᚾ ᚢᚨᚱ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛏᚱᛖ, ᚢᚨᚱ ᛗᛖᚾᚾᛖᚾ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛊᛏᚨᚨᚢᛚ."
+
+```
+
 **Features:**
 - Handles all your special rules for ä, ö, ü, å, ø, æ, th, sk, sj
 - Case-insensitive translation (converts everything to lowercase in Rhunes)
