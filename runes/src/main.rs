@@ -160,6 +160,14 @@ impl RhunesTranslator {
                         handled = true;
                     }
                 }
+            } else if current_char == 'ᚲ' {
+                if let Some(&next_char) = chars.peek() {
+                    if next_char == 'ᛊ' {
+                        result.push_str("x");
+                        chars.next(); 
+                        handled = true;
+                    }
+                } 
             } else if current_char == 'ᛇ' {
                 if let Some(&next_char) = chars.peek() {
                     if next_char == 'ᛇ' {
