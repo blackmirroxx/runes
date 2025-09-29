@@ -28,8 +28,8 @@ This will output:
 ```
 ner skeppen var gjorda av tre, var mennen gjorda av xtaavl.
 ```
-The reverse is far from perfect but good enough XD. x is sometimes translated as ᛊ but also as ᚲᛊ. 
-This is an issue I need to work on. 
+The reverse is far from perfect but good enough XD. x is sometimes translated as ᛊ but also as ᚲᛊ.
+I chose the x =  ᚲᛊ, as it is more consistent. Unfortunatelly, old scriptures, do not always follow this rule -.- 
 
 **Features:**
 - Handles all your special rules for ä, ö, ü, å, ø, æ, th, sk, sj
