@@ -26,8 +26,9 @@ This will output:
 
 This will output:
 ```
-ᚾᛖᚱ ᚺᚱᚲᛖᛈᛈᛖᚾ ᚢᚨᚱ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛏᚱᛖ, ᚢᚨᚱ ᛗᛖᚾᚾᛖᚾ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛊᛏᚨᚨᚢᛚ.
+ner skeppen var gjorda av tre, var mennen gjorda av ytaavl.
 ```
+The reverse is for from perfect but good enough XD
 
 **Features:**
 - Handles all your special rules for ä, ö, ü, å, ø, æ, th, sk, sj
