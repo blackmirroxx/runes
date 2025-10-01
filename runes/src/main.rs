@@ -45,6 +45,7 @@ impl RhunesTranslator {
             ("sk", "ᚺᚱᚲ"),
             ("sj", "ᚺᚱᚲ"),
             ("x", "ᚲᛊ"),
+            ("ng", "ᛜ"),
         ].iter().cloned().collect();
         
         let reverse_special_rules: HashMap<&str, &str> = [
@@ -57,6 +58,7 @@ impl RhunesTranslator {
             ("ᚦ", "th"),
             ("ᚺᚱᚲ", "sk"),
             ("ᚲᛊ", "x"),
+            ("ᛜ", "ng"),
         ].iter().cloned().collect();
 
         Self {
@@ -88,6 +90,19 @@ impl RhunesTranslator {
                             chars.next(); // Skip the next character
                             lower_chars.next();
                             handled = true;
+                        }
+                    }
+                }
+            }
+
+            if current_lower == 'n' {
+                if let Some(&next_lower) = lower_chars.peek(){
+                    if next_lower == 'g' {
+                        if let Some(&rhunes) = self.special_rules.get("ng"){
+                            result.push_str(rhunes); 
+                            chars.next(); 
+                            lower_chars.next(); 
+                            handled = true; 
                         }
                     }
                 }
