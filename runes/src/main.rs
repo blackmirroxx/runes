@@ -95,7 +95,7 @@ impl RhunesTranslator {
                 }
             }
 
-            if current_lower == 'n' {
+            if !handled && current_lower == 'n' {
                 if let Some(&next_lower) = lower_chars.peek(){
                     if next_lower == 'g' {
                         if let Some(&rhunes) = self.special_rules.get("ng"){
@@ -156,9 +156,11 @@ impl RhunesTranslator {
                     }
                 }
             } else if current_char == 'ᛜ' {
-                result.push_str("ng"); 
-                chars.next(); 
-                handled = true; 
+                if let Some(&next_char) = chars.peek() { // for better continuation
+                    result.push_str("ng"); 
+                    chars.next(); 
+                    handled = true; 
+                }
             } else if current_char == 'ᚢ' {
                 if let Some(&next_char) = chars.peek() {
                     if next_char == 'ᛖ' {
