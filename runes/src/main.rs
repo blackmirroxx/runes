@@ -156,11 +156,9 @@ impl RhunesTranslator {
                     }
                 }
             } else if current_char == 'ᛜ' {
-                if let Some(&next_char) = chars.peek() { // for better continuation
                     result.push_str("ng"); 
                     chars.next(); 
                     handled = true; 
-                }
             } else if current_char == 'ᚢ' {
                 if let Some(&next_char) = chars.peek() {
                     if next_char == 'ᛖ' {
