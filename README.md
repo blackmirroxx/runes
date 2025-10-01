@@ -15,7 +15,7 @@ cargo build --release
 
 This will output:
 ```
-ᚾᛖᚱ ᚺᚱᚲᛖᛈᛈᛖᚾ ᚢᚨᚱ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛏᚱᛖ, ᚢᚨᚱ ᛗᛖᚾᚾᛖᚾ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛊᛏᚨᚨᚢᛚ.
+ᚾᛇᚱ ᚺᚱᚲᛖᛈᛈᛖᚾ ᚢᚨᚱ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛏᚱᛇ, ᚢᚨᚱ ᛗᛇᚾᚾᛖᚾ ᚷᛃᛟᚱᛞᚨ ᚨᚢ ᛊᛏᚨᚨᛚ.
 ```
 
 3. Reverse the translation
@@ -26,7 +26,7 @@ This will output:
 
 This will output:
 ```
-ner skeppen var gjorda av tre, var mennen gjorda av xtaavl.
+ner skeppen var gjorda av tre, var mennen gjorda av staavl.
 ```
 The reverse is far from perfect but good enough XD. x is sometimes translated as ᛊ but also as ᚲᛊ.
 I chose the x =  ᚲᛊ, as it is more consistent. Unfortunatelly, old scriptures, do not always follow this rule -.- 
