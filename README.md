@@ -1,5 +1,8 @@
 # rhunes
-translate text into runes on the cli
+translate text into runes on the cli. 
+More specifically it uses "Elder Futhark" also known as the Old norse Alphabet. 
+It was used from 500 B.C.E until 500 A.D. and got replaced by Younger Futhark, Short-Twig Futhark, 
+Staveless Hälsinge Futhark, Medieval Runerow and eventually emerged to the Anglo-Saxon Futhark. 
 
 Here's a Rust implementation of your Rhunes translator:
 

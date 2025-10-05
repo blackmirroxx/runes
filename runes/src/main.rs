@@ -21,8 +21,8 @@ struct RhunesTranslator {
 
 impl RhunesTranslator {
     fn new() -> Self {
-        let latin_chars = "abcdefghijklmnopqrstuvwyz";
-        let rhunes_chars = "ᚨᛒᚲᛞᛖᚠᚷᚺᛁᛃᚲᛚᛗᚾᛟᛈᚲᚱᛊᛏᚢᚢᚹᛁᛉ";
+        let latin_chars = "abcdefghijklmnopqrstuvwyzð";
+        let rhunes_chars = "ᚨᛒᚲᛞᛖᚠᚷᚺᛁᛃᚲᛚᛗᚾᛟᛈᚲᚱᛊᛏᚢᚢᚹᛁᛉᚦ";
         
         let latin_to_rhunes: HashMap<char, char> = latin_chars
             .chars()
@@ -45,6 +45,7 @@ impl RhunesTranslator {
             ("sk", "ᚺᚱᚲ"),
             ("sj", "ᚺᚱᚲ"),
             ("x", "ᚲᛊ"),
+            ("ng", "ᛜ"),
         ].iter().cloned().collect();
         
         let reverse_special_rules: HashMap<&str, &str> = [
@@ -57,6 +58,7 @@ impl RhunesTranslator {
             ("ᚦ", "th"),
             ("ᚺᚱᚲ", "sk"),
             ("ᚲᛊ", "x"),
+            ("ᛜ", "ng"),
         ].iter().cloned().collect();
 
         Self {
@@ -88,6 +90,19 @@ impl RhunesTranslator {
                             chars.next(); // Skip the next character
                             lower_chars.next();
                             handled = true;
+                        }
+                    }
+                }
+            }
+
+            if !handled && current_lower == 'n' {
+                if let Some(&next_lower) = lower_chars.peek(){
+                    if next_lower == 'g' {
+                        if let Some(&rhunes) = self.special_rules.get("ng"){
+                            result.push_str(rhunes); 
+                            chars.next(); 
+                            lower_chars.next(); 
+                            handled = true; 
                         }
                     }
                 }
@@ -140,6 +155,9 @@ impl RhunesTranslator {
                         handled = true;
                     }
                 }
+            } else if current_char == 'ᛜ' {
+                    result.push_str("ng"); 
+                    handled = true; 
             } else if current_char == 'ᚢ' {
                 if let Some(&next_char) = chars.peek() {
                     if next_char == 'ᛖ' {
