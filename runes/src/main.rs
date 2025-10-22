@@ -109,11 +109,9 @@ impl RhunesTranslator {
             if !handled {
                 if let Some(&rhune) = self.latin_to_rhunes.get(&current_lower) {
                     // Preserve case for non-special characters
-                    let rhune = if current_char.is_uppercase() {
-                        rhune.to_ascii_uppercase()
-                    } else {
-                        rhune
-                    };
+                    let rhune = 
+                        if current_char.is_uppercase() {rhune.to_ascii_uppercase() } 
+                        else {rhune};
                     result.push(rhune);
                 } else {
                     // Keep non-alphabetic characters as-is
@@ -146,11 +144,8 @@ impl RhunesTranslator {
 
             // Default to base mapping
             if !handled {
-                if let Some(&latin) = self.rhunes_to_latin.get(&current_char) {
-                    result.push(latin);
-                } else {
-                    result.push(current_char);
-                }
+                if let Some(&latin) = self.rhunes_to_latin.get(&current_char) {result.push(latin); } 
+                else {result.push(current_char); }
             }
         }
 
@@ -162,11 +157,8 @@ fn main() {
     let args = Args::parse();
     let translator = RhunesTranslator::new();
 
-    if args.reverse {
-        println!("{}", translator.from_rhunes(&args.text));
-    } else {
-        println!("{}", translator.to_rhunes(&args.text));
-    }
+    if args.reverse {println!("{}", translator.from_rhunes(&args.text)); } 
+    else {println!("{}", translator.to_rhunes(&args.text)); }
 }
 
 #[cfg(test)]
